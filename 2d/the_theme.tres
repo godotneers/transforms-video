@@ -1,0 +1,13 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cvfhj68l6kscn"]
+
+[sub_resource type="SystemFont" id="SystemFont_mryrj"]
+font_names = PackedStringArray("Lato")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oc4hv"]
+bg_color = Color(0.689285, 0.689285, 0.689285, 0.458824)
+
+[resource]
+default_font = SubResource("SystemFont_mryrj")
+default_font_size = 22
+lit/base_type = &"PanelContainer"
+lit/styles/panel = SubResource("StyleBoxFlat_oc4hv")

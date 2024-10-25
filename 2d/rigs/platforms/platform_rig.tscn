@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://bywlcsgq1d4kl"]
+
+[ext_resource type="PackedScene" uid="uid://cdoenvheihha2" path="res://2d/shared/blueprint_paper/blueprint_paper.tscn" id="1_k86ce"]
+[ext_resource type="Texture2D" uid="uid://dk1njrvqq2kt" path="res://2d/rigs/platforms/truss_beam.png" id="2_08d1e"]
+[ext_resource type="Texture2D" uid="uid://dh7buafu6cy4q" path="res://2d/rigs/platforms/platform.png" id="2_ty3se"]
+[ext_resource type="Texture2D" uid="uid://dgc5sxsxut6ky" path="res://2d/shared/mrg/mrg_front.tres" id="6_xboyn"]
+[ext_resource type="PackedScene" uid="uid://dhin4dbtgbfca" path="res://2d/shared/title_lable.tscn" id="7_jnbkr"]
+
+[node name="PlatformRig" type="Node"]
+
+[node name="TextureRect" parent="." instance=ExtResource("1_k86ce")]
+metadata/_edit_lock_ = true
+
+[node name="TrussBeam1" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+rotation = -0.785398
+texture = ExtResource("2_08d1e")
+
+[node name="TrussBeam2" type="Sprite2D" parent="TrussBeam1"]
+position = Vector2(-169, 0.000585794)
+rotation = -1.5708
+texture = ExtResource("2_08d1e")
+
+[node name="Platform1" type="Sprite2D" parent="TrussBeam1/TrussBeam2"]
+position = Vector2(-175, 1)
+rotation = 2.35619
+texture = ExtResource("2_ty3se")
+
+[node name="Platform2" type="Sprite2D" parent="TrussBeam1/TrussBeam2"]
+position = Vector2(168.707, 2.94974)
+rotation = 2.35619
+texture = ExtResource("2_ty3se")
+
+[node name="MrG" type="Sprite2D" parent="TrussBeam1/TrussBeam2/Platform2"]
+position = Vector2(-80.2903, -59.1227)
+texture = ExtResource("6_xboyn")
+region_rect = Rect2(0, 128, 128, 128)
+
+[node name="Platform3" type="Sprite2D" parent="TrussBeam1"]
+position = Vector2(168.657, -1.82928)
+rotation = 0.785398
+texture = ExtResource("2_ty3se")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" parent="CanvasLayer" instance=ExtResource("7_jnbkr")]
+anchors_preset = 0
+anchor_right = 0.0
+offset_right = 206.0
+grow_horizontal = 1
+
+[node name="Label" parent="CanvasLayer/MarginContainer" index="0"]
+text = "Transform parenting
+"
+
+[editable path="CanvasLayer/MarginContainer"]

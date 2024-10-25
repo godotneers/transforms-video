@@ -1,0 +1,136 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvvygjtxpaqgm"]
+
+[ext_resource type="Script" path="res://2d/calculations/transform_calculations.gd" id="1_e2nvu"]
+[ext_resource type="PackedScene" uid="uid://cdoenvheihha2" path="res://2d/shared/blueprint_paper/blueprint_paper.tscn" id="1_fju1j"]
+[ext_resource type="PackedScene" uid="uid://dhin4dbtgbfca" path="res://2d/shared/title_lable.tscn" id="2_ko2ue"]
+[ext_resource type="Texture2D" uid="uid://dgc5sxsxut6ky" path="res://2d/shared/mrg/mrg_front.tres" id="3_8livu"]
+[ext_resource type="PackedScene" uid="uid://3mcnqypyuslw" path="res://2d/matrices/transform2d_visualizer.tscn" id="5_bwte7"]
+
+[sub_resource type="SystemFont" id="SystemFont_1c1bl"]
+font_names = PackedStringArray("JetBrains Mono")
+
+[node name="TransformCalculations" type="Node2D"]
+script = ExtResource("1_e2nvu")
+metadata/_edit_lock_ = true
+
+[node name="Background" parent="." instance=ExtResource("1_fju1j")]
+metadata/_edit_lock_ = true
+
+[node name="Marker1" type="Marker2D" parent="."]
+position = Vector2(249, 142)
+gizmo_extents = 82.1
+metadata/_edit_lock_ = true
+
+[node name="Transform1" type="Sprite2D" parent="Marker1"]
+unique_name_in_owner = true
+texture = ExtResource("3_8livu")
+
+[node name="Marker2" type="Marker2D" parent="."]
+position = Vector2(834, 142)
+gizmo_extents = 82.1
+metadata/_edit_lock_ = true
+
+[node name="Transform2" type="Sprite2D" parent="Marker2"]
+unique_name_in_owner = true
+texture = ExtResource("3_8livu")
+
+[node name="Marker3" type="Marker2D" parent="."]
+position = Vector2(541, 504)
+gizmo_extents = 82.1
+metadata/_edit_lock_ = true
+
+[node name="Transform3" type="Sprite2D" parent="Marker3"]
+unique_name_in_owner = true
+texture = ExtResource("3_8livu")
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" parent="." instance=ExtResource("2_ko2ue")]
+offset_left = -133.0
+offset_top = -15.0
+offset_right = 189.0
+offset_bottom = 29.0
+metadata/_edit_lock_ = true
+
+[node name="Label" parent="MarginContainer" index="0"]
+text = "Transform calculations"
+metadata/_edit_lock_ = true
+
+[node name="tf1" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_lock_ = true
+
+[node name="Label1" type="Label" parent="tf1"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 230.0
+offset_right = 322.0
+offset_bottom = 263.0
+theme_override_fonts/font = SubResource("SystemFont_1c1bl")
+theme_override_font_sizes/font_size = 24
+text = "transform1"
+
+[node name="Transform1Viz" parent="tf1" instance=ExtResource("5_bwte7")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 14.0
+offset_top = 239.0
+offset_right = 472.0
+offset_bottom = 360.0
+
+[node name="tf2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 594.0
+offset_right = 634.0
+offset_bottom = 40.0
+metadata/_edit_lock_ = true
+
+[node name="Label1" type="Label" parent="tf2"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 230.0
+offset_right = 322.0
+offset_bottom = 263.0
+theme_override_fonts/font = SubResource("SystemFont_1c1bl")
+theme_override_font_sizes/font_size = 24
+text = "transform2"
+
+[node name="Transform2Viz" parent="tf2" instance=ExtResource("5_bwte7")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 14.0
+offset_top = 239.0
+offset_right = 472.0
+offset_bottom = 360.0
+
+[node name="tf3" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 294.0
+offset_top = 396.0
+offset_right = 334.0
+offset_bottom = 436.0
+metadata/_edit_lock_ = true
+
+[node name="Label1" type="Label" parent="tf3"]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 229.0
+offset_right = 415.0
+offset_bottom = 262.0
+theme_override_fonts/font = SubResource("SystemFont_1c1bl")
+theme_override_font_sizes/font_size = 24
+text = "transform1 * transform2"
+
+[node name="Transform3Viz" parent="tf3" instance=ExtResource("5_bwte7")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 14.0
+offset_top = 239.0
+offset_right = 472.0
+offset_bottom = 360.0
+
+[editable path="MarginContainer"]

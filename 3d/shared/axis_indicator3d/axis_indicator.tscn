@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://du0o4ss4lpvb4"]
+
+[ext_resource type="PackedScene" uid="uid://ic2dk22vd38d" path="res://3d/shared/axis_indicator3d/x_axis.tscn" id="1_nfnfh"]
+[ext_resource type="PackedScene" uid="uid://di1komhyq0016" path="res://3d/shared/axis_indicator3d/y_axis.tscn" id="2_i0n5r"]
+[ext_resource type="PackedScene" uid="uid://d3xbwgdmog5d2" path="res://3d/shared/axis_indicator3d/z_axis.tscn" id="3_5qy2w"]
+
+[node name="AxisIndicator" type="Node3D"]
+
+[node name="arrow_3d" parent="." instance=ExtResource("1_nfnfh")]
+
+[node name="arrow_3d2" parent="." instance=ExtResource("2_i0n5r")]
+
+[node name="arrow_3d3" parent="." instance=ExtResource("3_5qy2w")]

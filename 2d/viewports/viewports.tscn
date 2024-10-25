@@ -1,0 +1,107 @@
+[gd_scene load_steps=7 format=3 uid="uid://bxxjjuccf3cll"]
+
+[ext_resource type="Script" path="res://2d/viewports/mouse_tracker.gd" id="1_a4iuu"]
+[ext_resource type="PackedScene" uid="uid://cdoenvheihha2" path="res://2d/shared/blueprint_paper/blueprint_paper.tscn" id="2_smwh8"]
+[ext_resource type="Script" path="res://2d/camera_control.gd" id="3_k7w01"]
+[ext_resource type="Texture2D" uid="uid://dk3hds8plv3c4" path="res://2d/viewports/target_marker.png" id="5_urktr"]
+[ext_resource type="Script" path="res://2d/viewports/transform_visualization.gd" id="6_x0vw6"]
+[ext_resource type="PackedScene" uid="uid://3mcnqypyuslw" path="res://2d/matrices/transform2d_visualizer.tscn" id="7_rovb6"]
+
+[node name="Coordinate Systems" type="Node"]
+
+[node name="blueprint_paper" parent="." instance=ExtResource("2_smwh8")]
+metadata/_edit_lock_ = true
+
+[node name="Viewport Coordinates" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 54.0
+offset_top = 66.0
+offset_right = 94.0
+offset_bottom = 88.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+ignore_rotation = false
+script = ExtResource("3_k7w01")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+rotation = 0.436332
+scale = Vector2(1, 1)
+transform = Transform2D(0.906308, 0.422618, -0.422618, 0.906308, 0, 0)
+follow_viewport_enabled = true
+
+[node name="TargetIndicator" type="Node2D" parent="CanvasLayer"]
+unique_name_in_owner = true
+position = Vector2(574, 325)
+script = ExtResource("1_a4iuu")
+
+[node name="IndicatorSprite" type="Sprite2D" parent="CanvasLayer/TargetIndicator"]
+rotation = 0.785398
+texture = ExtResource("5_urktr")
+
+[node name="UI Canvas Layer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="UI Canvas Layer"]
+unique_name_in_owner = true
+offset_left = 1.0
+offset_right = 463.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 32
+text = "Viewport and Canvas Transforms"
+
+[node name="Transform Viz" type="HBoxContainer" parent="UI Canvas Layer"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -513.0
+offset_top = -83.9999
+offset_right = 869.0
+offset_bottom = 37.0001
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+script = ExtResource("6_x0vw6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI Canvas Layer/Transform Viz"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI Canvas Layer/Transform Viz/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Mouse Indicator Global Transform"
+horizontal_alignment = 1
+
+[node name="MouseIndicatorGlobalTransform" parent="UI Canvas Layer/Transform Viz/VBoxContainer" instance=ExtResource("7_rovb6")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="UI Canvas Layer/Transform Viz"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="UI Canvas Layer/Transform Viz/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Canvas Layer Transform
+"
+horizontal_alignment = 1
+
+[node name="CanvasLayerTransform" parent="UI Canvas Layer/Transform Viz/VBoxContainer3" instance=ExtResource("7_rovb6")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="UI Canvas Layer/Transform Viz"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="UI Canvas Layer/Transform Viz/VBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Viewport (Camera) Transform
+"
+horizontal_alignment = 1
+
+[node name="Viewport Transform" parent="UI Canvas Layer/Transform Viz/VBoxContainer4" instance=ExtResource("7_rovb6")]
+unique_name_in_owner = true
+layout_mode = 2

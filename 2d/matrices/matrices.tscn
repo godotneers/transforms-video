@@ -1,0 +1,197 @@
+[gd_scene load_steps=7 format=3 uid="uid://bc1x4u1s8ngw7"]
+
+[ext_resource type="PackedScene" uid="uid://cdoenvheihha2" path="res://2d/shared/blueprint_paper/blueprint_paper.tscn" id="1_dpt7q"]
+[ext_resource type="Script" path="res://2d/matrices/matrices.gd" id="1_ya381"]
+[ext_resource type="PackedScene" uid="uid://bof3pwo3a0gak" path="res://2d/shared/position_indicator/position_indicator.tscn" id="3_j35ld"]
+[ext_resource type="Texture2D" uid="uid://dgc5sxsxut6ky" path="res://2d/shared/mrg/mrg_front.tres" id="3_jlusg"]
+[ext_resource type="PackedScene" uid="uid://3mcnqypyuslw" path="res://2d/matrices/transform2d_visualizer.tscn" id="4_h31i8"]
+[ext_resource type="PackedScene" uid="uid://bpaq6u72gcawi" path="res://2d/shared/axis_arrows/axis_arrows.tscn" id="5_lmwo5"]
+
+[node name="Matrices" type="Node2D"]
+script = ExtResource("1_ya381")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" parent="." instance=ExtResource("1_dpt7q")]
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -277.0
+offset_top = -243.0
+offset_right = 134.0
+offset_bottom = -194.0
+theme_override_font_sizes/font_size = 32
+text = "2D Transforms"
+metadata/_edit_lock_ = true
+
+[node name="MrG" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("3_jlusg")
+
+[node name="PositionIndicator" parent="MrG" instance=ExtResource("3_j35ld")]
+top_level = true
+position = Vector2(7, 158)
+full_mode = true
+
+[node name="AxisArrows" parent="MrG" instance=ExtResource("5_lmwo5")]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 295.0
+offset_top = -230.0
+offset_right = 887.0
+offset_bottom = 141.0
+
+[node name="00 Transform" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/00 Transform"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Transform
+"
+horizontal_alignment = 2
+
+[node name="Transform Formula Matrix" parent="VBoxContainer/00 Transform" instance=ExtResource("4_h31i8")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="01 PositionFormula" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/01 PositionFormula"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Position"
+horizontal_alignment = 2
+
+[node name="Position Formula Matrix" parent="VBoxContainer/01 PositionFormula" instance=ExtResource("4_h31i8")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="01 Position" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/01 Position"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Position"
+horizontal_alignment = 2
+
+[node name="Position Matrix" parent="VBoxContainer/01 Position" instance=ExtResource("4_h31i8")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="02 Rotation Formula" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/02 Rotation Formula"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Rotation"
+horizontal_alignment = 2
+
+[node name="Rotation Formula Matrix" parent="VBoxContainer/02 Rotation Formula" instance=ExtResource("4_h31i8")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="02 Rotation Formula Live" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/02 Rotation Formula Live"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Rotation"
+horizontal_alignment = 2
+
+[node name="Rotation Live Formula Matrix" parent="VBoxContainer/02 Rotation Formula Live" instance=ExtResource("4_h31i8")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="02 Rotation" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/02 Rotation"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Rotation"
+horizontal_alignment = 2
+
+[node name="Rotation Matrix" parent="VBoxContainer/02 Rotation" instance=ExtResource("4_h31i8")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="03 Scale Formula" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/03 Scale Formula"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Scale"
+horizontal_alignment = 2
+
+[node name="Scale Formula Matrix" parent="VBoxContainer/03 Scale Formula" instance=ExtResource("4_h31i8")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="03 Scale" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/03 Scale"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Scale"
+horizontal_alignment = 2
+
+[node name="Scale Matrix" parent="VBoxContainer/03 Scale" instance=ExtResource("4_h31i8")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="04 Skew Formula" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/04 Skew Formula"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Skew
+"
+horizontal_alignment = 2
+
+[node name="Skew Formula Matrix" parent="VBoxContainer/04 Skew Formula" instance=ExtResource("4_h31i8")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="04 Skew" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/04 Skew"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Skew
+"
+horizontal_alignment = 2
+
+[node name="Skew Matrix" parent="VBoxContainer/04 Skew" instance=ExtResource("4_h31i8")]
+unique_name_in_owner = true
+layout_mode = 2

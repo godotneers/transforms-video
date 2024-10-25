@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3xbwgdmog5d2"]
+
+[ext_resource type="PackedScene" uid="uid://cc0yd8351op34" path="res://3d/shared/axis_indicator3d/arrow_3d.glb" id="1_rold5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lisix"]
+albedo_color = Color(0.101961, 0.0901961, 0.764706, 1)
+emission_enabled = true
+
+[node name="arrow_3d" instance=ExtResource("1_rold5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Cone" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_lisix")

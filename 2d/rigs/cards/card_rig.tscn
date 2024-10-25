@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0dfbk6ry3k4y"]
+
+[ext_resource type="PackedScene" uid="uid://cdoenvheihha2" path="res://2d/shared/blueprint_paper/blueprint_paper.tscn" id="1_lfqid"]
+[ext_resource type="PackedScene" uid="uid://dhin4dbtgbfca" path="res://2d/shared/title_lable.tscn" id="2_y8b4o"]
+[ext_resource type="PackedScene" uid="uid://l35inxoqa5it" path="res://2d/rigs/cards/card.tscn" id="3_s04i3"]
+
+[node name="CardRig" type="Node2D"]
+
+[node name="TextureRect" parent="." instance=ExtResource("1_lfqid")]
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" parent="CanvasLayer" instance=ExtResource("2_y8b4o")]
+
+[node name="Label" parent="CanvasLayer/MarginContainer" index="0"]
+text = "Transform Rigs
+"
+
+[node name="Card" parent="." instance=ExtResource("3_s04i3")]
+position = Vector2(277, 367)
+
+[node name="Card2" parent="." instance=ExtResource("3_s04i3")]
+position = Vector2(566, 367)
+
+[node name="Card3" parent="." instance=ExtResource("3_s04i3")]
+position = Vector2(855, 367)
+
+[editable path="CanvasLayer/MarginContainer"]

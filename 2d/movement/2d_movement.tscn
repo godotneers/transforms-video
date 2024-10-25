@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cedll7fjmyr88"]
+
+[ext_resource type="PackedScene" uid="uid://cdoenvheihha2" path="res://2d/shared/blueprint_paper/blueprint_paper.tscn" id="1_4plym"]
+[ext_resource type="PackedScene" uid="uid://bmmoiyghi1o6l" path="res://2d/shared/mrg/mr_g.tscn" id="2_0tw4s"]
+[ext_resource type="PackedScene" uid="uid://bmeaswwdwxeuq" path="res://2d/shared/input_visualization.tscn" id="5_d3d63"]
+[ext_resource type="PackedScene" uid="uid://dhin4dbtgbfca" path="res://2d/shared/title_lable.tscn" id="5_x2irj"]
+
+[node name="Movement" type="Node"]
+
+[node name="BG" parent="." instance=ExtResource("1_4plym")]
+metadata/_edit_lock_ = true
+
+[node name="Mr G" parent="." instance=ExtResource("2_0tw4s")]
+position = Vector2(595, 342)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Input Visualization" parent="CanvasLayer" instance=ExtResource("5_d3d63")]
+
+[node name="MarginContainer" parent="CanvasLayer" instance=ExtResource("5_x2irj")]

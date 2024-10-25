@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdoenvheihha2"]
+
+[ext_resource type="Texture2D" uid="uid://gfibiweoe4uv" path="res://2d/shared/blueprint_paper/bg_tile.png" id="1_17bqk"]
+
+[node name="Background" type="TextureRect"]
+offset_left = -25000.0
+offset_top = -25000.0
+offset_right = 25000.0
+offset_bottom = 25000.0
+pivot_offset = Vector2(1071, 675)
+texture = ExtResource("1_17bqk")
+expand_mode = 1
+stretch_mode = 1

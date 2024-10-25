@@ -1,0 +1,163 @@
+[gd_scene load_steps=5 format=3 uid="uid://duks7cfvqgkfw"]
+
+[ext_resource type="Script" path="res://3d/shared/transform_3d_visualizer.gd" id="1_fr58a"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_36or5"]
+viewport_path = NodePath("/root/@EditorNode@17147/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@61/@VBoxContainer@62/@PanelContainer@109/MainScreen/@CanvasItemEditor@9461/@VSplitContainer@9280/@HSplitContainer@9282/@HSplitContainer@9284/@Control@9285/@SubViewportContainer@9286/@SubViewport@9287/3DTransformVisualizer/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uddt7"]
+resource_local_to_scene = true
+transparency = 1
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_36or5")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_hl6ee"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_uddt7")
+size = Vector2(7.93, 1.81)
+
+[node name="3DTransformVisualizer" type="MeshInstance3D"]
+mesh = SubResource("QuadMesh_hl6ee")
+script = ExtResource("1_fr58a")
+title = "Lorem"
+
+[node name="SubViewport" type="SubViewport" parent="."]
+unique_name_in_owner = true
+transparent_bg = true
+handle_input_locally = false
+gui_disable_input = true
+size = Vector2i(793, 181)
+render_target_update_mode = 4
+
+[node name="VisualizerControl" type="HBoxContainer" parent="SubViewport"]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 30
+
+[node name="TitleLabel" type="Label" parent="SubViewport/VisualizerControl"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Lorem"
+
+[node name="Matrix" type="HBoxContainer" parent="SubViewport/VisualizerControl"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SubViewport/VisualizerControl/Matrix"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+text = "{"
+
+[node name="MarginContainer" type="MarginContainer" parent="SubViewport/VisualizerControl/Matrix"]
+layout_mode = 2
+theme_override_constants/margin_top = 15
+
+[node name="GridContainer" type="GridContainer" parent="SubViewport/VisualizerControl/Matrix/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+columns = 4
+
+[node name="00" type="Label" parent="SubViewport/VisualizerControl/Matrix/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
+
+[node name="10" type="Label" parent="SubViewport/VisualizerControl/Matrix/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
+
+[node name="20" type="Label" parent="SubViewport/VisualizerControl/Matrix/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
+
+[node name="30" type="Label" parent="SubViewport/VisualizerControl/Matrix/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
+
+[node name="01" type="Label" parent="SubViewport/VisualizerControl/Matrix/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
+
+[node name="11" type="Label" parent="SubViewport/VisualizerControl/Matrix/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
+
+[node name="21" type="Label" parent="SubViewport/VisualizerControl/Matrix/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
+
+[node name="31" type="Label" parent="SubViewport/VisualizerControl/Matrix/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
+
+[node name="02" type="Label" parent="SubViewport/VisualizerControl/Matrix/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
+
+[node name="12" type="Label" parent="SubViewport/VisualizerControl/Matrix/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
+
+[node name="22" type="Label" parent="SubViewport/VisualizerControl/Matrix/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
+
+[node name="32" type="Label" parent="SubViewport/VisualizerControl/Matrix/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="SubViewport/VisualizerControl/Matrix"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+text = "}"

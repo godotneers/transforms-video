@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0fqv8e3tljmp"]
+
+[ext_resource type="Texture2D" uid="uid://c6dm5b8upukyt" path="res://2d/movement/bolt.png" id="1_b5s4m"]
+[ext_resource type="Script" path="res://2d/movement/bolt.gd" id="2_o61jt"]
+
+[node name="Bolt" type="Sprite2D"]
+texture = ExtResource("1_b5s4m")
+script = ExtResource("2_o61jt")
