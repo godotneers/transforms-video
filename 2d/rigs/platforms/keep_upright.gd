@@ -1,5 +1,6 @@
-extends Sprite2D
+extends Node2D
+
+func _process(delta:float) -> void:
+	global_rotation = 0
 
 
-func _process(delta: float) -> void:
-	rotation = -(get_parent().global_transform.get_rotation())

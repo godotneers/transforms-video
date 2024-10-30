@@ -1,7 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1mt0xkw8x8bx"]
+[gd_scene load_steps=12 format=3 uid="uid://b1mt0xkw8x8bx"]
 
 [ext_resource type="PackedScene" uid="uid://conoirvjdhcuy" path="res://3d/shared/tree.tscn" id="1_od4t2"]
+[ext_resource type="Script" path="res://3d/fp_tp_camera/camera_3d.gd" id="2_hl66v"]
 [ext_resource type="PackedScene" uid="uid://bmeaswwdwxeuq" path="res://2d/shared/input_visualization.tscn" id="3_6xlvo"]
+[ext_resource type="PackedScene" uid="uid://du0o4ss4lpvb4" path="res://3d/shared/axis_indicator3d/axis_indicator.tscn" id="3_t6ptf"]
+[ext_resource type="PackedScene" uid="uid://4kb86lxbov4v" path="res://3d/player/mr.g.glb" id="5_mo55m"]
+[ext_resource type="PackedScene" uid="uid://vdvsb80m0kj6" path="res://3d/fp_tp_camera/bolt.tscn" id="6_22b6o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_giegt"]
 albedo_color = Color(0, 0.258824, 0, 1)
@@ -14,6 +18,9 @@ sky_material = SubResource("ProceduralSkyMaterial_n87bl")
 [sub_resource type="Environment" id="Environment_ovkar"]
 background_mode = 2
 sky = SubResource("Sky_1lmt8")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ua7xj"]
+radius = 1.38627
 
 [node name="FpTpCamera" type="Node3D"]
 
@@ -155,12 +162,39 @@ metadata/_edit_lock_ = true
 transform = Transform3D(0.352215, 0, 1.26695, 0, 1.315, 0, -1.26695, 0, 0.352215, 16.4528, -3.8147e-06, 31.6483)
 metadata/_edit_lock_ = true
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Input Visualization" parent="CanvasLayer" instance=ExtResource("3_6xlvo")]
 offset_top = -316.0
 offset_right = 316.0
 show_turn_controls = false
+
+[node name="Yaw" type="CharacterBody3D" parent="."]
+script = ExtResource("2_hl66v")
+bolt_scene = ExtResource("6_22b6o")
+
+[node name="Pitch" type="Node3D" parent="Yaw"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Yaw/Pitch"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.99436)
+
+[node name="AxisIndicator" parent="Yaw/Pitch/Camera3D" instance=ExtResource("3_t6ptf")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+visible = false
+
+[node name="mr_g" parent="Yaw" instance=ExtResource("5_mo55m")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 1.23063, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Yaw"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27164, 0)
+shape = SubResource("SphereShape3D_ua7xj")
+
+[node name="RightHand" type="Marker3D" parent="Yaw"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.98118, 1.17324, -1.1487)
+
+[node name="LeftHand" type="Marker3D" parent="Yaw"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00132, 1.17324, -1.1487)

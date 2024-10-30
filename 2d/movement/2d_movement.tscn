@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://cedll7fjmyr88"]
+[gd_scene load_steps=8 format=3 uid="uid://cedll7fjmyr88"]
 
 [ext_resource type="PackedScene" uid="uid://cdoenvheihha2" path="res://2d/shared/blueprint_paper/blueprint_paper.tscn" id="1_4plym"]
 [ext_resource type="PackedScene" uid="uid://bmmoiyghi1o6l" path="res://2d/shared/mrg/mr_g.tscn" id="2_0tw4s"]
+[ext_resource type="Script" path="res://2d/shared/mrg/player.gd" id="3_psjgc"]
+[ext_resource type="PackedScene" uid="uid://bpaq6u72gcawi" path="res://2d/shared/axis_arrows/axis_arrows.tscn" id="4_cc1nr"]
 [ext_resource type="PackedScene" uid="uid://bmeaswwdwxeuq" path="res://2d/shared/input_visualization.tscn" id="5_d3d63"]
 [ext_resource type="PackedScene" uid="uid://dhin4dbtgbfca" path="res://2d/shared/title_lable.tscn" id="5_x2irj"]
+[ext_resource type="PackedScene" uid="uid://c0fqv8e3tljmp" path="res://2d/movement/bolt.tscn" id="7_asavp"]
 
 [node name="Movement" type="Node"]
 
@@ -12,6 +15,11 @@ metadata/_edit_lock_ = true
 
 [node name="Mr G" parent="." instance=ExtResource("2_0tw4s")]
 position = Vector2(595, 342)
+script = ExtResource("3_psjgc")
+bolt_scene = ExtResource("7_asavp")
+
+[node name="AxisArrows" parent="Mr G" instance=ExtResource("4_cc1nr")]
+visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

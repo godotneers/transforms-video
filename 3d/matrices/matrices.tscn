@@ -22,14 +22,14 @@ billboard_mode = 1
 material = SubResource("StandardMaterial3D_rntgj")
 size = Vector2(2000, 2000)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_w8axi"]
-viewport_path = NodePath("SubViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_hh2hf"]
+viewport_path = NodePath("/root/@EditorNode@17146/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@61/@VBoxContainer@62/@PanelContainer@109/MainScreen/@CanvasItemEditor@9461/@VSplitContainer@9280/@HSplitContainer@9282/@HSplitContainer@9284/@Control@9285/@SubViewportContainer@9286/@SubViewport@9287/TransformsIn3D/00 Transform/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sacpd"]
 resource_local_to_scene = true
 transparency = 1
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_w8axi")
+albedo_texture = SubResource("ViewportTexture_hh2hf")
 billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_funxx"]
@@ -37,14 +37,14 @@ resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_sacpd")
 size = Vector2(8.79, 1.81)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_p0sr7"]
-viewport_path = NodePath("SubViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_tuvne"]
+viewport_path = NodePath("/root/@EditorNode@17146/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@61/@VBoxContainer@62/@PanelContainer@109/MainScreen/@CanvasItemEditor@9461/@VSplitContainer@9280/@HSplitContainer@9282/@HSplitContainer@9284/@Control@9285/@SubViewportContainer@9286/@SubViewport@9287/TransformsIn3D/01 Position Formula/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ecv4x"]
 resource_local_to_scene = true
 transparency = 1
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_p0sr7")
+albedo_texture = SubResource("ViewportTexture_tuvne")
 billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_1yp4u"]
@@ -52,14 +52,14 @@ resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_ecv4x")
 size = Vector2(8.34, 1.81)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_844i4"]
-viewport_path = NodePath("SubViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_at34d"]
+viewport_path = NodePath("/root/@EditorNode@17146/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@61/@VBoxContainer@62/@PanelContainer@109/MainScreen/@CanvasItemEditor@9461/@VSplitContainer@9280/@HSplitContainer@9282/@HSplitContainer@9284/@Control@9285/@SubViewportContainer@9286/@SubViewport@9287/TransformsIn3D/01 Position/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cpajd"]
 resource_local_to_scene = true
 transparency = 1
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_844i4")
+albedo_texture = SubResource("ViewportTexture_at34d")
 billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_fwwfc"]
@@ -67,14 +67,14 @@ resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_cpajd")
 size = Vector2(8.34, 1.81)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_7ol4s"]
-viewport_path = NodePath("SubViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_lt87r"]
+viewport_path = NodePath("/root/@EditorNode@17146/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@61/@VBoxContainer@62/@PanelContainer@109/MainScreen/@CanvasItemEditor@9461/@VSplitContainer@9280/@HSplitContainer@9282/@HSplitContainer@9284/@Control@9285/@SubViewportContainer@9286/@SubViewport@9287/TransformsIn3D/02 Rotation Formula/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32ft7"]
 resource_local_to_scene = true
 transparency = 1
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_7ol4s")
+albedo_texture = SubResource("ViewportTexture_lt87r")
 billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_3rkng"]
@@ -82,14 +82,14 @@ resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_32ft7")
 size = Vector2(16.4, 1.81)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_6lusi"]
-viewport_path = NodePath("SubViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_tdndq"]
+viewport_path = NodePath("/root/@EditorNode@17146/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@61/@VBoxContainer@62/@PanelContainer@109/MainScreen/@CanvasItemEditor@9461/@VSplitContainer@9280/@HSplitContainer@9282/@HSplitContainer@9284/@Control@9285/@SubViewportContainer@9286/@SubViewport@9287/TransformsIn3D/02 Rotation/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_abwvb"]
 resource_local_to_scene = true
 transparency = 1
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_6lusi")
+albedo_texture = SubResource("ViewportTexture_tdndq")
 billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_ubdaf"]
@@ -97,14 +97,14 @@ resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_abwvb")
 size = Vector2(8.45, 1.81)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_k4jt8"]
-viewport_path = NodePath("SubViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_uvxn0"]
+viewport_path = NodePath("/root/@EditorNode@17146/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@61/@VBoxContainer@62/@PanelContainer@109/MainScreen/@CanvasItemEditor@9461/@VSplitContainer@9280/@HSplitContainer@9282/@HSplitContainer@9284/@Control@9285/@SubViewportContainer@9286/@SubViewport@9287/TransformsIn3D/03 Scale Formula/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rbp1j"]
 resource_local_to_scene = true
 transparency = 1
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_k4jt8")
+albedo_texture = SubResource("ViewportTexture_uvxn0")
 billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_7lcj8"]
@@ -112,14 +112,14 @@ resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_rbp1j")
 size = Vector2(7.67, 1.81)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_01s5j"]
-viewport_path = NodePath("SubViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_p7h33"]
+viewport_path = NodePath("/root/@EditorNode@17146/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@61/@VBoxContainer@62/@PanelContainer@109/MainScreen/@CanvasItemEditor@9461/@VSplitContainer@9280/@HSplitContainer@9282/@HSplitContainer@9284/@Control@9285/@SubViewportContainer@9286/@SubViewport@9287/TransformsIn3D/03 Scale/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h8rhx"]
 resource_local_to_scene = true
 transparency = 1
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_01s5j")
+albedo_texture = SubResource("ViewportTexture_p7h33")
 billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_ejpt8"]
@@ -127,14 +127,14 @@ resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_h8rhx")
 size = Vector2(7.67, 1.81)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_a4irb"]
-viewport_path = NodePath("SubViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_1amna"]
+viewport_path = NodePath("/root/@EditorNode@17146/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@61/@VBoxContainer@62/@PanelContainer@109/MainScreen/@CanvasItemEditor@9461/@VSplitContainer@9280/@HSplitContainer@9282/@HSplitContainer@9284/@Control@9285/@SubViewportContainer@9286/@SubViewport@9287/TransformsIn3D/04 Skew/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ympdt"]
 resource_local_to_scene = true
 transparency = 1
 shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_a4irb")
+albedo_texture = SubResource("ViewportTexture_1amna")
 billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_rdihx"]
@@ -152,14 +152,13 @@ environment = SubResource("Environment_j8fen")
 
 [node name="Mr G" parent="Root" instance=ExtResource("1_r7vcm")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.999995, 0, 0, 0, 0.999995, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.999985, 0, 0, 0, 0.999985, 0, 0, 0)
 
 [node name="AxisIndicator" parent="Root/Mr G" instance=ExtResource("2_qro4q")]
-visible = false
 metadata/_edit_lock_ = true
 
 [node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.66697, 3.39136, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.66697, 4.15903, 0)
 pixel_size = 0.0015
 billboard = 1
 no_depth_test = true
@@ -182,6 +181,7 @@ metadata/_edit_lock_ = true
 [node name="00 Transform" parent="." instance=ExtResource("4_jal4q")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.79294, 2.11668, 1.56653)
+visible = false
 mesh = SubResource("QuadMesh_funxx")
 title = "Transform"
 metadata/_edit_lock_ = true
@@ -237,7 +237,6 @@ metadata/_edit_lock_ = true
 [node name="04 Skew" parent="." instance=ExtResource("4_jal4q")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.79294, 2.11668, 1.56653)
-visible = false
 mesh = SubResource("QuadMesh_rdihx")
 title = "Skew"
 metadata/_edit_lock_ = true

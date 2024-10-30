@@ -34,7 +34,6 @@ position = Vector2(7, 158)
 full_mode = true
 
 [node name="AxisArrows" parent="MrG" instance=ExtResource("5_lmwo5")]
-visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -45,7 +44,6 @@ offset_right = 887.0
 offset_bottom = 141.0
 
 [node name="00 Transform" type="HBoxContainer" parent="VBoxContainer"]
-visible = false
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/00 Transform"]
@@ -76,6 +74,7 @@ unique_name_in_owner = true
 layout_mode = 2
 
 [node name="01 Position" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/01 Position"]

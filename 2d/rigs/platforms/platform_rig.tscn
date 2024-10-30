@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bywlcsgq1d4kl"]
+[gd_scene load_steps=8 format=3 uid="uid://bywlcsgq1d4kl"]
 
 [ext_resource type="PackedScene" uid="uid://cdoenvheihha2" path="res://2d/shared/blueprint_paper/blueprint_paper.tscn" id="1_k86ce"]
 [ext_resource type="Texture2D" uid="uid://dk1njrvqq2kt" path="res://2d/rigs/platforms/truss_beam.png" id="2_08d1e"]
 [ext_resource type="Texture2D" uid="uid://dh7buafu6cy4q" path="res://2d/rigs/platforms/platform.png" id="2_ty3se"]
+[ext_resource type="Script" path="res://2d/rigs/platforms/rotate.gd" id="3_348uc"]
+[ext_resource type="Script" path="res://2d/rigs/platforms/keep_upright.gd" id="5_evlja"]
 [ext_resource type="Texture2D" uid="uid://dgc5sxsxut6ky" path="res://2d/shared/mrg/mrg_front.tres" id="6_xboyn"]
 [ext_resource type="PackedScene" uid="uid://dhin4dbtgbfca" path="res://2d/shared/title_lable.tscn" id="7_jnbkr"]
 
@@ -15,31 +17,37 @@ metadata/_edit_lock_ = true
 position = Vector2(576, 324)
 rotation = -0.785398
 texture = ExtResource("2_08d1e")
+script = ExtResource("3_348uc")
 
 [node name="TrussBeam2" type="Sprite2D" parent="TrussBeam1"]
 position = Vector2(-169, 0.000585794)
 rotation = -1.5708
 texture = ExtResource("2_08d1e")
+script = ExtResource("3_348uc")
+rotation_speed_degrees = 30.0
 
 [node name="Platform1" type="Sprite2D" parent="TrussBeam1/TrussBeam2"]
-position = Vector2(-175, 1)
-rotation = 2.35619
-texture = ExtResource("2_ty3se")
-
-[node name="Platform2" type="Sprite2D" parent="TrussBeam1/TrussBeam2"]
 position = Vector2(168.707, 2.94974)
 rotation = 2.35619
 texture = ExtResource("2_ty3se")
+script = ExtResource("5_evlja")
 
-[node name="MrG" type="Sprite2D" parent="TrussBeam1/TrussBeam2/Platform2"]
+[node name="MrG" type="Sprite2D" parent="TrussBeam1/TrussBeam2/Platform1"]
 position = Vector2(-80.2903, -59.1227)
 texture = ExtResource("6_xboyn")
 region_rect = Rect2(0, 128, 128, 128)
+
+[node name="Platform2" type="Sprite2D" parent="TrussBeam1/TrussBeam2"]
+position = Vector2(-175, 1)
+rotation = 2.35619
+texture = ExtResource("2_ty3se")
+script = ExtResource("5_evlja")
 
 [node name="Platform3" type="Sprite2D" parent="TrussBeam1"]
 position = Vector2(168.657, -1.82928)
 rotation = 0.785398
 texture = ExtResource("2_ty3se")
+script = ExtResource("5_evlja")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0dfbk6ry3k4y"]
+[gd_scene load_steps=5 format=3 uid="uid://c0dfbk6ry3k4y"]
 
 [ext_resource type="PackedScene" uid="uid://cdoenvheihha2" path="res://2d/shared/blueprint_paper/blueprint_paper.tscn" id="1_lfqid"]
 [ext_resource type="PackedScene" uid="uid://dhin4dbtgbfca" path="res://2d/shared/title_lable.tscn" id="2_y8b4o"]
 [ext_resource type="PackedScene" uid="uid://l35inxoqa5it" path="res://2d/rigs/cards/card.tscn" id="3_s04i3"]
+[ext_resource type="Script" path="res://2d/rigs/cards/fan_out.gd" id="3_u0bf5"]
 
 [node name="CardRig" type="Node2D"]
 
@@ -17,13 +18,56 @@ metadata/_edit_lock_ = true
 text = "Transform Rigs
 "
 
-[node name="Card" parent="." instance=ExtResource("3_s04i3")]
-position = Vector2(277, 367)
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("3_u0bf5")
 
-[node name="Card2" parent="." instance=ExtResource("3_s04i3")]
-position = Vector2(566, 367)
+[node name="CardPivot" type="Node2D" parent="Node2D"]
+position = Vector2(513, 904)
+rotation = -0.497716
 
-[node name="Card3" parent="." instance=ExtResource("3_s04i3")]
-position = Vector2(855, 367)
+[node name="Card" parent="Node2D/CardPivot" instance=ExtResource("3_s04i3")]
+position = Vector2(0, -472)
+
+[node name="CardPivot2" type="Node2D" parent="Node2D"]
+position = Vector2(513, 904)
+rotation = -0.339186
+
+[node name="Card" parent="Node2D/CardPivot2" instance=ExtResource("3_s04i3")]
+position = Vector2(0, -472)
+
+[node name="CardPivot3" type="Node2D" parent="Node2D"]
+position = Vector2(513, 904)
+rotation = -0.424751
+
+[node name="Card" parent="Node2D/CardPivot3" instance=ExtResource("3_s04i3")]
+position = Vector2(0, -472)
+
+[node name="CardPivot4" type="Node2D" parent="Node2D"]
+position = Vector2(513, 904)
+rotation = -0.497716
+
+[node name="Card" parent="Node2D/CardPivot4" instance=ExtResource("3_s04i3")]
+position = Vector2(0, -472)
+
+[node name="CardPivot5" type="Node2D" parent="Node2D"]
+position = Vector2(513, 904)
+rotation = -0.497716
+
+[node name="Card" parent="Node2D/CardPivot5" instance=ExtResource("3_s04i3")]
+position = Vector2(0, -472)
+
+[node name="CardPivot6" type="Node2D" parent="Node2D"]
+position = Vector2(513, 904)
+rotation = -0.497716
+
+[node name="Card" parent="Node2D/CardPivot6" instance=ExtResource("3_s04i3")]
+position = Vector2(0, -472)
+
+[node name="CardPivot7" type="Node2D" parent="Node2D"]
+position = Vector2(513, 904)
+rotation = -0.497716
+
+[node name="Card" parent="Node2D/CardPivot7" instance=ExtResource("3_s04i3")]
+position = Vector2(0, -472)
 
 [editable path="CanvasLayer/MarginContainer"]
