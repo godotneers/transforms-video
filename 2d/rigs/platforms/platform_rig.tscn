@@ -22,19 +22,19 @@ rotation = -1.5708
 texture = ExtResource("2_08d1e")
 
 [node name="Platform1" type="Sprite2D" parent="TrussBeam1/TrussBeam2"]
-position = Vector2(-175, 1)
-rotation = 2.35619
-texture = ExtResource("2_ty3se")
-
-[node name="Platform2" type="Sprite2D" parent="TrussBeam1/TrussBeam2"]
 position = Vector2(168.707, 2.94974)
 rotation = 2.35619
 texture = ExtResource("2_ty3se")
 
-[node name="MrG" type="Sprite2D" parent="TrussBeam1/TrussBeam2/Platform2"]
+[node name="MrG" type="Sprite2D" parent="TrussBeam1/TrussBeam2/Platform1"]
 position = Vector2(-80.2903, -59.1227)
 texture = ExtResource("6_xboyn")
 region_rect = Rect2(0, 128, 128, 128)
+
+[node name="Platform2" type="Sprite2D" parent="TrussBeam1/TrussBeam2"]
+position = Vector2(-175, 1)
+rotation = 2.35619
+texture = ExtResource("2_ty3se")
 
 [node name="Platform3" type="Sprite2D" parent="TrussBeam1"]
 position = Vector2(168.657, -1.82928)
